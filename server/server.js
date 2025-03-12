@@ -19,6 +19,9 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // Routes
 app.use("/api", propertyRoutes);
 
+// Export the app for testing
+module.exports = app;
+
 
 // Sync the model with the database
 sequelize
