@@ -34,7 +34,7 @@ const AddPropertyModal = ({ isOpen, onClose }) => {
 
     try {
       // Send a POST request to the backend
-      const response = await axios.post("https://your-backend-app.herokuapp.com/api/properties", data, {
+      const response = await axios.post("https://property-connect-977c8d0bd20d.herokuapp.com/api/properties", data, {
         headers: {
           "Content-Type": "multipart/form-data", // Set the content type for file upload
         },

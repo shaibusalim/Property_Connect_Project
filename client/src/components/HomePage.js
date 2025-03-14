@@ -20,13 +20,13 @@ const HomePage = () => {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const response = await axios.get("https://your-backend-app.herokuapp.com/api/properties");
+        const response = await axios.get("https://property-connect-977c8d0bd20d.herokuapp.com/api/properties");
         console.log("API Response:", response.data);
     
         // Prepend the backend URL to the image path
         const propertiesWithFullImageUrl = response.data.map((property) => ({
           ...property,
-          image: property.image ? `https://your-backend-app.herokuapp.com/${property.image}` : "https://via.placeholder.com/400x300",
+          image: property.image ? `https://property-connect-977c8d0bd20d.herokuapp.com/${property.image}` : "https://via.placeholder.com/400x300",
         }));
     
         setProperties(propertiesWithFullImageUrl);
